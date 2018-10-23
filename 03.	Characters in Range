@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class charactesInRange {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        char first = input.nextLine().charAt(0);
+        char second = input.nextLine().charAt(0);
+        if (first > second){
+            char temporary = first;
+            first = second;
+            second = temporary;
+        }
+        printCharactersInRange(first, second);
+    }
+
+    private static void printCharactersInRange(char first, char second) {
+        first++;
+        for (char i = first; i < second; i++) {
+            System.out.print(i + " ");
+        }
+    }
+}
