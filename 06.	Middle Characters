@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class middleCharacter {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String text = input.nextLine();
+        printMiddleChar(text);
+    }
+
+    private static void printMiddleChar(String text) {
+        int length = text.length();
+        String middle = "";
+        if (length % 2 == 0){
+            int middleIndex = length / 2;
+            middle = "" + text.charAt(middleIndex - 1) + text.charAt(middleIndex);
+        }else{
+            int middleIndex = length / 2;
+            middle += text.charAt(middleIndex);
+        }
+        System.out.println(middle);
+    }
+}
