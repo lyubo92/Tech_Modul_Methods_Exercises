@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class topNUmbers {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int number = Integer.parseInt(input.nextLine());
+        topNumbers(number);
+    }
+
+    private static void topNumbers(int number) {
+        for (int i = 8; i <= number; i++) {
+            int num = i;
+            int sum = 0;
+            boolean oddDogit = false;
+            while (num != 0){
+                int lastDigit = num % 10;
+                sum += lastDigit;
+                if (lastDigit % 2 != 0){
+                    oddDogit = true;
+                }
+                num /= 10;
+            }
+            if (oddDogit && sum % 8 == 0){
+                System.out.println(i);
+            }
+        }
+    }
+}
