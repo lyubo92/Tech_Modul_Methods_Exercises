@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+import static java.lang.Integer.sum;
+
+public class addAndSubstract {
+    public static int sum(int a, int b){
+        int sum = a + b;
+        return sum;
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int first = Integer.parseInt(input.nextLine());
+        int second = Integer.parseInt(input.nextLine());
+        int third = Integer.parseInt(input.nextLine());
+        int total = sum(first, second) - third;
+        System.out.println(total);
+    }
+}
